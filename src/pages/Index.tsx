@@ -17,9 +17,35 @@ interface Song {
 const Index = () => {
   const [currentSong, setCurrentSong] = useState<Song | undefined>();
   const [selectedRegion, setSelectedRegion] = useState<string>('');
+  const [currentPlaylist, setCurrentPlaylist] = useState<Song[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePlay = (song: Song) => {
+    const playlist = selectedRegion 
+      ? mockSongs.filter(s => s.region === selectedRegion)
+      : mockSongs;
+    
+    const index = playlist.findIndex(s => s.id === song.id);
+    
     setCurrentSong(song);
+    setCurrentPlaylist(playlist);
+    setCurrentIndex(index);
+  };
+
+  const handleNext = () => {
+    if (currentIndex < currentPlaylist.length - 1) {
+      const nextIndex = currentIndex + 1;
+      setCurrentIndex(nextIndex);
+      setCurrentSong(currentPlaylist[nextIndex]);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      const prevIndex = currentIndex - 1;
+      setCurrentIndex(prevIndex);
+      setCurrentSong(currentPlaylist[prevIndex]);
+    }
   };
 
   const filteredSongs = selectedRegion 
@@ -95,7 +121,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Music Collection */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
@@ -152,7 +177,11 @@ const Index = () => {
         </div>
       </section>
 
-      <MusicPlayer currentSong={currentSong} />
+      <MusicPlayer 
+        currentSong={currentSong} 
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+      />
     </div>
   );
 };

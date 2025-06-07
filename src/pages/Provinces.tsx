@@ -19,9 +19,35 @@ interface Song {
 const Provinces = () => {
   const [selectedProvince, setSelectedProvince] = useState<string>('');
   const [currentSong, setCurrentSong] = useState<Song | undefined>();
+  const [currentPlaylist, setCurrentPlaylist] = useState<Song[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePlay = (song: Song) => {
+    const playlist = selectedProvince 
+      ? mockSongs.filter(s => s.province === selectedProvince)
+      : mockSongs;
+    
+    const index = playlist.findIndex(s => s.id === song.id);
+    
     setCurrentSong(song);
+    setCurrentPlaylist(playlist);
+    setCurrentIndex(index);
+  };
+
+  const handleNext = () => {
+    if (currentIndex < currentPlaylist.length - 1) {
+      const nextIndex = currentIndex + 1;
+      setCurrentIndex(nextIndex);
+      setCurrentSong(currentPlaylist[nextIndex]);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      const prevIndex = currentIndex - 1;
+      setCurrentIndex(prevIndex);
+      setCurrentSong(currentPlaylist[prevIndex]);
+    }
   };
 
   const filteredSongs = selectedProvince 
@@ -67,7 +93,6 @@ const Provinces = () => {
             </button>
           </div>
 
-          {/* Grouped Province Buttons */}
           <div className="space-y-6">
             {Object.entries(regionGroups).map(([regionName, provinces]) => (
               <div key={regionName} className="text-center">
@@ -129,7 +154,11 @@ const Provinces = () => {
         </div>
       </div>
 
-      <MusicPlayer currentSong={currentSong} />
+      <MusicPlayer 
+        currentSong={currentSong} 
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+      />
     </div>
   );
 };

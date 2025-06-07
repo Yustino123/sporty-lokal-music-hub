@@ -17,6 +17,8 @@ interface Song {
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentSong, setCurrentSong] = useState<Song | undefined>();
+  const [currentPlaylist, setCurrentPlaylist] = useState<Song[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   
   const filteredSongs = mockSongs.filter(song =>
     song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -25,7 +27,28 @@ const Search = () => {
   );
 
   const handlePlay = (song: Song) => {
+    const playlist = filteredSongs;
+    const index = playlist.findIndex(s => s.id === song.id);
+    
     setCurrentSong(song);
+    setCurrentPlaylist(playlist);
+    setCurrentIndex(index);
+  };
+
+  const handleNext = () => {
+    if (currentIndex < currentPlaylist.length - 1) {
+      const nextIndex = currentIndex + 1;
+      setCurrentIndex(nextIndex);
+      setCurrentSong(currentPlaylist[nextIndex]);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      const prevIndex = currentIndex - 1;
+      setCurrentIndex(prevIndex);
+      setCurrentSong(currentPlaylist[prevIndex]);
+    }
   };
 
   return (
@@ -65,7 +88,11 @@ const Search = () => {
         )}
       </div>
 
-      <MusicPlayer currentSong={currentSong} />
+      <MusicPlayer 
+        currentSong={currentSong} 
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+      />
     </div>
   );
 };
