@@ -1,12 +1,141 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import SongCard from '../components/SongCard';
+import MusicPlayer from '../components/MusicPlayer';
+import { mockSongs, regions } from '../data/mockData';
+
+interface Song {
+  id: string;
+  title: string;
+  artist: string;
+  region: string;
+  duration: string;
+}
 
 const Index = () => {
+  const [currentSong, setCurrentSong] = useState<Song | undefined>();
+  const [selectedRegion, setSelectedRegion] = useState<string>('');
+
+  const handlePlay = (song: Song) => {
+    setCurrentSong(song);
+  };
+
+  const filteredSongs = selectedRegion 
+    ? mockSongs.filter(song => song.region === selectedRegion)
+    : mockSongs;
+
+  const featuredRegions = ['Jawa Tengah', 'Kalimantan Selatan', 'DKI Jakarta', 'Papua', 'Jawa Timur', 'Aceh'];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-green-600 via-green-500 to-yellow-400 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Jelajahi Musik Daerah Indonesia
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Temukan kekayaan musik tradisional nusantara dari Sabang sampai Merauke
+          </p>
+          <div className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
+            <span className="text-lg">🎵 Lebih dari 1000+ lagu tradisional</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Region Filter */}
+      <section className="py-8 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Jelajahi berdasarkan Daerah</h2>
+          <div className="flex flex-wrap gap-2 mb-4">
+            <button
+              onClick={() => setSelectedRegion('')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedRegion === '' 
+                  ? 'bg-green-600 text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              Semua Daerah
+            </button>
+            {featuredRegions.map((region) => (
+              <button
+                key={region}
+                onClick={() => setSelectedRegion(region)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedRegion === region 
+                    ? 'bg-green-600 text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {region}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Music Collection */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900">
+              {selectedRegion ? `Musik dari ${selectedRegion}` : 'Koleksi Musik Populer'}
+            </h2>
+            <span className="text-gray-600">{filteredSongs.length} lagu</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredSongs.map((song) => (
+              <SongCard key={song.id} song={song} onPlay={handlePlay} />
+            ))}
+          </div>
+
+          {filteredSongs.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">
+                Belum ada musik dari daerah {selectedRegion}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 bg-gradient-to-r from-yellow-50 to-green-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Tentang Sporty Lokal
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+            Sporty Lokal adalah platform digital untuk melestarikan dan mempromosikan 
+            kekayaan musik tradisional Indonesia. Kami berkomitmen menjadi jembatan 
+            antara warisan budaya dan generasi muda.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl mb-4">🎼</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Musik Otentik</h3>
+              <p className="text-gray-600">Koleksi musik tradisional dari seluruh nusantara</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-4">👥</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Komunitas</h3>
+              <p className="text-gray-600">Mendukung musisi lokal dan seniman tradisional</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-4">🌍</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Pelestarian</h3>
+              <p className="text-gray-600">Menjaga warisan budaya untuk generasi mendatang</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <MusicPlayer currentSong={currentSong} />
     </div>
   );
 };
