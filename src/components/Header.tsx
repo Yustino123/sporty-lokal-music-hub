@@ -20,6 +20,9 @@ const Header = () => {
             <Link to="/search" className="hover:text-yellow-200 transition-colors">
               Cari Musik
             </Link>
+            <Link to="/provinces" className="hover:text-yellow-200 transition-colors">
+              Provinsi
+            </Link>
             <Link to="/artists" className="hover:text-yellow-200 transition-colors">
               Musisi
             </Link>

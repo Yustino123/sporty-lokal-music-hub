@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SongCard from '../components/SongCard';
 import MusicPlayer from '../components/MusicPlayer';
-import { mockSongs, regions } from '../data/mockData';
+import { mockSongs, indonesianProvinces } from '../data/mockData';
 
 interface Song {
   id: string;
@@ -40,8 +41,16 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
             Temukan kekayaan musik tradisional nusantara dari Sabang sampai Merauke
           </p>
-          <div className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
-            <span className="text-lg">🎵 Lebih dari 1000+ lagu tradisional</span>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3">
+              <span className="text-lg">🎵 38 Provinsi Indonesia</span>
+            </div>
+            <Link 
+              to="/provinces"
+              className="inline-flex items-center bg-white text-green-600 rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Jelajahi Per Provinsi
+            </Link>
           </div>
         </div>
       </section>
@@ -74,6 +83,14 @@ const Index = () => {
                 {region}
               </button>
             ))}
+          </div>
+          <div className="text-center">
+            <Link 
+              to="/provinces" 
+              className="text-green-600 hover:text-green-700 font-medium"
+            >
+              Lihat semua 38 provinsi →
+            </Link>
           </div>
         </div>
       </section>
