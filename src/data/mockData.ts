@@ -1,4 +1,3 @@
-
 export const mockSongs = [
   // Sumatera
   {
@@ -7,7 +6,8 @@ export const mockSongs = [
     artist: 'Aceh Culture Ensemble',
     region: 'Aceh',
     province: 'Aceh',
-    duration: '4:20'
+    duration: '4:20',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '2',
@@ -15,7 +15,8 @@ export const mockSongs = [
     artist: 'Batak Traditional',
     region: 'Sumatra Utara',
     province: 'Sumatra Utara',
-    duration: '3:45'
+    duration: '3:45',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '3',
@@ -23,7 +24,8 @@ export const mockSongs = [
     artist: 'Minang Heritage',
     region: 'Sumatra Barat',
     province: 'Sumatra Barat',
-    duration: '4:12'
+    duration: '4:12',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '4',
@@ -31,7 +33,8 @@ export const mockSongs = [
     artist: 'Riau Traditional',
     region: 'Riau',
     province: 'Riau',
-    duration: '3:28'
+    duration: '3:28',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '5',
@@ -39,7 +42,8 @@ export const mockSongs = [
     artist: 'Jambi Folk',
     region: 'Jambi',
     province: 'Jambi',
-    duration: '4:05'
+    duration: '4:05',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '6',
@@ -47,7 +51,8 @@ export const mockSongs = [
     artist: 'Palembang Traditional',
     region: 'Sumatra Selatan',
     province: 'Sumatra Selatan',
-    duration: '3:55'
+    duration: '3:55',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '7',
@@ -55,7 +60,8 @@ export const mockSongs = [
     artist: 'Bengkulu Heritage',
     region: 'Bengkulu',
     province: 'Bengkulu',
-    duration: '4:18'
+    duration: '4:18',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '8',
@@ -63,7 +69,8 @@ export const mockSongs = [
     artist: 'Lampung Culture',
     region: 'Lampung',
     province: 'Lampung',
-    duration: '3:42'
+    duration: '3:42',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Jawa & Sekitarnya
@@ -73,7 +80,8 @@ export const mockSongs = [
     artist: 'Betawi Heritage',
     region: 'DKI Jakarta',
     province: 'DKI Jakarta',
-    duration: '3:28'
+    duration: '3:28',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '10',
@@ -81,7 +89,8 @@ export const mockSongs = [
     artist: 'Sunda Traditional',
     region: 'Jawa Barat',
     province: 'Jawa Barat',
-    duration: '4:15'
+    duration: '4:15',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '11',
@@ -89,7 +98,8 @@ export const mockSongs = [
     artist: 'Pak Subagyo',
     region: 'Jawa Tengah',
     province: 'Jawa Tengah',
-    duration: '3:45'
+    duration: '3:45',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '12',
@@ -97,7 +107,8 @@ export const mockSongs = [
     artist: 'Surabaya Folk',
     region: 'Jawa Timur',
     province: 'Jawa Timur',
-    duration: '3:55'
+    duration: '3:55',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '13',
@@ -105,7 +116,8 @@ export const mockSongs = [
     artist: 'Yogya Traditional',
     region: 'DI Yogyakarta',
     province: 'DI Yogyakarta',
-    duration: '4:02'
+    duration: '4:02',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '14',
@@ -113,7 +125,8 @@ export const mockSongs = [
     artist: 'Banten Heritage',
     region: 'Banten',
     province: 'Banten',
-    duration: '3:38'
+    duration: '3:38',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Bali & Nusa Tenggara
@@ -123,7 +136,8 @@ export const mockSongs = [
     artist: 'Bali Traditional',
     region: 'Bali',
     province: 'Bali',
-    duration: '4:25'
+    duration: '4:25',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '16',
@@ -131,7 +145,8 @@ export const mockSongs = [
     artist: 'Sasak Culture',
     region: 'Nusa Tenggara Barat',
     province: 'Nusa Tenggara Barat',
-    duration: '3:52'
+    duration: '3:52',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '17',
@@ -139,7 +154,8 @@ export const mockSongs = [
     artist: 'Timor Heritage',
     region: 'Nusa Tenggara Timur',
     province: 'Nusa Tenggara Timur',
-    duration: '4:08'
+    duration: '4:08',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Kalimantan
@@ -149,7 +165,8 @@ export const mockSongs = [
     artist: 'Sari Banjar',
     region: 'Kalimantan Selatan',
     province: 'Kalimantan Selatan',
-    duration: '4:12'
+    duration: '4:12',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '19',
@@ -157,7 +174,8 @@ export const mockSongs = [
     artist: 'Dayak Traditional',
     region: 'Kalimantan Barat',
     province: 'Kalimantan Barat',
-    duration: '3:48'
+    duration: '3:48',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '20',
@@ -165,7 +183,8 @@ export const mockSongs = [
     artist: 'Tengah Heritage',
     region: 'Kalimantan Tengah',
     province: 'Kalimantan Tengah',
-    duration: '4:03'
+    duration: '4:03',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '21',
@@ -173,7 +192,8 @@ export const mockSongs = [
     artist: 'Kutai Culture',
     region: 'Kalimantan Timur',
     province: 'Kalimantan Timur',
-    duration: '3:57'
+    duration: '3:57',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '22',
@@ -181,7 +201,8 @@ export const mockSongs = [
     artist: 'Utara Traditional',
     region: 'Kalimantan Utara',
     province: 'Kalimantan Utara',
-    duration: '4:11'
+    duration: '4:11',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Sulawesi
@@ -191,7 +212,8 @@ export const mockSongs = [
     artist: 'Minahasa Heritage',
     region: 'Sulawesi Utara',
     province: 'Sulawesi Utara',
-    duration: '3:44'
+    duration: '3:44',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '24',
@@ -199,7 +221,8 @@ export const mockSongs = [
     artist: 'Tengah Culture',
     region: 'Sulawesi Tengah',
     province: 'Sulawesi Tengah',
-    duration: '4:16'
+    duration: '4:16',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '25',
@@ -207,7 +230,8 @@ export const mockSongs = [
     artist: 'Makassar Traditional',
     region: 'Sulawesi Selatan',
     province: 'Sulawesi Selatan',
-    duration: '3:58'
+    duration: '3:58',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '26',
@@ -215,7 +239,8 @@ export const mockSongs = [
     artist: 'Buton Heritage',
     region: 'Sulawesi Tenggara',
     province: 'Sulawesi Tenggara',
-    duration: '4:07'
+    duration: '4:07',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '27',
@@ -223,7 +248,8 @@ export const mockSongs = [
     artist: 'Gorontalo Culture',
     region: 'Gorontalo',
     province: 'Gorontalo',
-    duration: '3:51'
+    duration: '3:51',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '28',
@@ -231,7 +257,8 @@ export const mockSongs = [
     artist: 'Barat Traditional',
     region: 'Sulawesi Barat',
     province: 'Sulawesi Barat',
-    duration: '4:22'
+    duration: '4:22',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Maluku & Papua
@@ -241,7 +268,8 @@ export const mockSongs = [
     artist: 'Maluku Heritage',
     region: 'Maluku',
     province: 'Maluku',
-    duration: '4:33'
+    duration: '4:33',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '30',
@@ -249,7 +277,8 @@ export const mockSongs = [
     artist: 'Utara Culture',
     region: 'Maluku Utara',
     province: 'Maluku Utara',
-    duration: '3:49'
+    duration: '3:49',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '31',
@@ -257,7 +286,8 @@ export const mockSongs = [
     artist: 'Papua Traditional Group',
     region: 'Papua',
     province: 'Papua',
-    duration: '5:03'
+    duration: '5:03',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '32',
@@ -265,7 +295,8 @@ export const mockSongs = [
     artist: 'Barat Heritage',
     region: 'Papua Barat',
     province: 'Papua Barat',
-    duration: '4:28'
+    duration: '4:28',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   
   // Provinsi Baru (sesuai pemekaran)
@@ -275,7 +306,8 @@ export const mockSongs = [
     artist: 'Kepri Culture',
     region: 'Kepulauan Riau',
     province: 'Kepulauan Riau',
-    duration: '3:56'
+    duration: '3:56',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '34',
@@ -283,7 +315,8 @@ export const mockSongs = [
     artist: 'Babel Traditional',
     region: 'Bangka Belitung',
     province: 'Bangka Belitung',
-    duration: '4:14'
+    duration: '4:14',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '35',
@@ -291,7 +324,8 @@ export const mockSongs = [
     artist: 'Tengah Culture',
     region: 'Papua Tengah',
     province: 'Papua Tengah',
-    duration: '4:45'
+    duration: '4:45',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '36',
@@ -299,7 +333,8 @@ export const mockSongs = [
     artist: 'Pegunungan Traditional',
     region: 'Papua Pegunungan',
     province: 'Papua Pegunungan',
-    duration: '4:33'
+    duration: '4:33',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '37',
@@ -307,7 +342,8 @@ export const mockSongs = [
     artist: 'Selatan Culture',
     region: 'Papua Selatan',
     province: 'Papua Selatan',
-    duration: '4:21'
+    duration: '4:21',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   },
   {
     id: '38',
@@ -315,7 +351,8 @@ export const mockSongs = [
     artist: 'Barat Daya Traditional',
     region: 'Papua Barat Daya',
     province: 'Papua Barat Daya',
-    duration: '4:37'
+    duration: '4:37',
+    audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'
   }
 ];
 
