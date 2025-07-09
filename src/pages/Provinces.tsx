@@ -68,16 +68,26 @@ const Provinces = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+      {/* Hero Section with Indonesian archipelago background */}
+      <section 
+        className="relative py-16 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=600&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-3xl font-bold mb-4">
             Musik Daerah 38 Provinsi Indonesia
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto opacity-90">
             Jelajahi kekayaan musik tradisional dari setiap provinsi di Indonesia, dari Sabang sampai Merauke
           </p>
         </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-8">
         {/* Province Selection */}
         <div className="mb-8">
           <div className="flex flex-wrap gap-2 justify-center mb-6">

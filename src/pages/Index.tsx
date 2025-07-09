@@ -59,8 +59,15 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 via-green-500 to-yellow-400 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section 
+        className="relative py-16 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1466442929976-97f336a657be?w=1200&h=600&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Jelajahi Musik Daerah Indonesia
           </h1>
@@ -147,12 +154,19 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-gradient-to-r from-yellow-50 to-green-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+      <section 
+        className="py-16 relative text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.8), rgba(234, 179, 8, 0.8)), url('https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=1200&h=400&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl font-bold mb-6">
             Tentang Sporty Lokal
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+          <p className="text-lg max-w-3xl mx-auto mb-8 opacity-90">
             Sporty Lokal adalah platform digital untuk melestarikan dan mempromosikan 
             kekayaan musik tradisional Indonesia. Kami berkomitmen menjadi jembatan 
             antara warisan budaya dan generasi muda.
@@ -160,18 +174,18 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl mb-4">🎼</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Musik Otentik</h3>
-              <p className="text-gray-600">Koleksi musik tradisional dari seluruh nusantara</p>
+              <h3 className="font-semibold mb-2">Musik Otentik</h3>
+              <p className="opacity-80">Koleksi musik tradisional dari seluruh nusantara</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-4">👥</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Komunitas</h3>
-              <p className="text-gray-600">Mendukung musisi lokal dan seniman tradisional</p>
+              <h3 className="font-semibold mb-2">Komunitas</h3>
+              <p className="opacity-80">Mendukung musisi lokal dan seniman tradisional</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-4">🌍</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Pelestarian</h3>
-              <p className="text-gray-600">Menjaga warisan budaya untuk generasi mendatang</p>
+              <h3 className="font-semibold mb-2">Pelestarian</h3>
+              <p className="opacity-80">Menjaga warisan budaya untuk generasi mendatang</p>
             </div>
           </div>
         </div>
